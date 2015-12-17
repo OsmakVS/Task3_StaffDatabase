@@ -123,6 +123,7 @@ namespace Task3_StaffDatabase
             persons.Add(per);
             Console.WriteLine("Данные успешно добавленны. Чтобы продолжить нажмите Enter");
             Console.ReadLine();
+            Console.Clear();
         }
         private void DeletePerson()
         {
@@ -137,6 +138,7 @@ namespace Task3_StaffDatabase
             {
                 Console.WriteLine("Можно использовать только цифры. Чтобы продолжить нажмите Enter.");
                 Console.ReadLine();
+                Console.Clear();
                 return;
             }
             foreach (Person p in persons)
@@ -146,11 +148,13 @@ namespace Task3_StaffDatabase
                     persons.Remove(p);
                     Console.WriteLine("Данные успешно удалены. Чтобы продолжить нажмите Enter.");
                     Console.ReadLine();
+                    Console.Clear();
                     return;
                 }
             }
             Console.WriteLine("Сотрудника с таким ID не существует. Чтобы продолжить нажмите Enter.");
             Console.ReadLine();
+            Console.Clear();
         }
         private void GetPerson()
         {
@@ -165,19 +169,22 @@ namespace Task3_StaffDatabase
             {
                 Console.WriteLine("Можно использовать только цифры. Чтобы продолжить нажмите Enter.");
                 Console.ReadLine();
+                Console.Clear();
                 return;
             }
             foreach (Person p in persons)
             {
                 if (p.ID == personId)
                 {
-                    Console.WriteLine(p + "Чтобы продолжить нажмите Enter.");
+                    Console.WriteLine(p + " Чтобы продолжить нажмите Enter.");
                     Console.ReadLine();
+                    Console.Clear();
                     return;
                 }
             }
             Console.WriteLine("Сотрудника с таким ID не существует. Чтобы продолжить нажмите Enter.");
             Console.ReadLine();
+            Console.Clear();
         }
         private void GetAllStaff()
         {
@@ -187,6 +194,7 @@ namespace Task3_StaffDatabase
             }
             Console.WriteLine("Чтобы продолжить нажмите Enter.");
             Console.ReadLine();
+            Console.Clear();
         }
         private void SaveExit(IOperation io)
         {
