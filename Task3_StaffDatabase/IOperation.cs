@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task3_StaffDatabase
 {
-    class Program
+    interface IOperation
     {
-        static void Main(string[] args)
-        {
-            Menu m = new Menu();
-            m.Processing();
-        }
+        List<Person> Read();
+        void Write(List<Person> persons);
     }
 }
